@@ -1,7 +1,8 @@
 # Windows Terminal Sandbox
 
-An interactive Python program that teaches basic Windows terminal commands
-through guided walkthroughs along with an isolated sandbox for running commands.
+The sandbox provides an isolated environment to work with terminal commands.All the files and folders you manipulate are strictly inside the sandbox folder and any operation outside the folder is not allowed.
+
+It also includes walkthroughs for beginners that guides them through the basic commands.
 
 ## Requirements
 - Python 3

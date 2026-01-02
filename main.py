@@ -29,8 +29,8 @@ exit               - Exit the sandbox
 """
 
 WALKTHROUGH1 = [
-    {"message": "Welcome to the first walkthrough! First, list files in the current directory using dir or ls.",
-     "expected": ["dir", "ls"], "onsuccess": "Great! You see the files and folders."},
+    {"message": "Welcome to the first walkthrough! First, list files in the current directory using dir.",
+     "expected": ["dir"], "onsuccess": "Great! You see the files and folders."},
 
     {"message": "Create a folder named practice using mkdir.\nHint : mkdir <foldername>",
      "expected": ["mkdir practice"], "onsuccess": "Practice folder created!"},

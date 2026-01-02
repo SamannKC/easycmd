@@ -33,10 +33,6 @@ help               - Show this help
 exit               - Exit the sandbox
 """
 
-# ------------------------------
-# Walkthrough Steps
-# ------------------------------
-
 WALKTHROUGH1 = [
     {"message": "Welcome to the first walkthrough! First, list files in the current directory using dir or ls.",
      "expected": ["dir", "ls"], "onsuccess": "Great! You see the files and folders."},
@@ -90,7 +86,11 @@ WALKTHROUGH3 = [
 
 
 def inside_sandbox(path):
-    return os.path.commonpath([SANDBOX, os.path.abspath(path)]) == SANDBOX
+    # Normalize both paths
+    sandbox_real = os.path.realpath(SANDBOX).lower()  # lowercase for Windows
+    target_real = os.path.realpath(path).lower()
+    return os.path.commonpath([sandbox_real, target_real]) == sandbox_real
+
 
 def format_prompt():
     cwd = os.getcwd()
@@ -222,10 +222,6 @@ def main():
         except EOFError:
             print(Fore.CYAN + "\n✅ Exiting sandbox...")
             break
-
-# ------------------------------
-# Entry Point
-# ------------------------------
 
 if __name__ == "__main__":
     main()

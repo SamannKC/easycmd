@@ -7,10 +7,11 @@ through guided walkthroughs.
 - Python 3
 - Windows
 
+```markdown
 ## Run
+
+```bash
 git clone https://github.com/SamannKC/easycmd.git
 cd easycmd
-```bash
 pip install -r requirements.txt
 python main.py
-

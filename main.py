@@ -60,17 +60,17 @@ WALKTHROUGH2 = [
     {"message": "Ping google.com to check connectivity.\nHint : ping <target>",
      "expected": ["ping google.com", "ping google"], "onsuccess": "Ping successful!"},
 
-    {"message": "Create a folder named HCK on the desktop using mkdir HCK.",
-     "expected": ["mkdir hck"], "onsuccess": "Folder HCK created!"},
+    {"message": "Create a folder named hck on the desktop using mkdir hck.",
+     "expected": ["mkdir hck"], "onsuccess": "Folder hck created!"},
 
-    {"message": "Create a file new.txt inside HCK with content 'Herald College Kathmandu'.",
+    {"message": "Create a file new.txt inside hck with content 'Herald College Kathmandu'.\nUse notepad for now.",
      "expected": ["notepad hck/new.txt"], "onsuccess": "new.txt created!"},
 
-    {"message": "Check the contents of the file using type <filename>.\nYou can specify files by specifying the relative path to the file.\nTry using type command with <foldername>/<filename>",
-     "expected": ["type hck/new.txt"], "onsuccess": "Great! you can see the contents of the file."},
+    {"message": "Check the contents of the file using type <filename>.\nYou can specify files by specifying the relative path to the file.\nTry using type command with <foldername>\<filename>",
+     "expected": [r"type hck\new.txt"], "onsuccess": "Great! you can see the contents of the file."},
 
     {"message": "Delete the new.txt file inside HCK.\nHint : del <filename>",
-     "expected": ["del hck/new.txt"], "onsuccess": "File deleted!"},
+     "expected": [r"del hck\new.txt"], "onsuccess": "File deleted!"},
 
     {"message": "Remove the folder HCK.\nHint : rmdir <foldername>\nKeep in mind, a folder must be empty if we want to remove using only the rmdir command.",
      "expected": ["rmdir hck"], "onsuccess": "Folder removed!"}

@@ -134,9 +134,13 @@ def execute_command(cmdline):
             print(Fore.RED + f"❌ No files match: {pattern}")
             return
         for f in matches:
+            if not inside_sandbox(f):
+                print(Fore.RED + f"❌ Cannot delete outside sandbox: {os.path.basename(f)}")
+                continue
             if os.path.isfile(f):
                 os.remove(f)
                 print(Fore.GREEN + f"Deleted {os.path.basename(f)}")
+
         return
 
     os.system(cmdline)

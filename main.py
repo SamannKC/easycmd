@@ -51,8 +51,8 @@ WALKTHROUGH1 = [
 ]
 
 WALKTHROUGH2 = [
-    {"message": "Let's check the Windows version using version command.",
-     "expected": ["version"], "onsuccess": "Windows version displayed!"},
+    {"message": "Let's check the Windows version using ver command.",
+     "expected": ["ver"], "onsuccess": "Windows version displayed!"},
 
     {"message": "Check the IP addresses of your device using ipconfig.",
      "expected": ["ipconfig"], "onsuccess": "IP addresses shown!"},
@@ -66,22 +66,25 @@ WALKTHROUGH2 = [
     {"message": "Create a file new.txt inside HCK with content 'Herald College Kathmandu'.",
      "expected": ["notepad hck/new.txt"], "onsuccess": "new.txt created!"},
 
+    {"message": "Check the contents of the file using type <filename>.\nYou can specify files by specifying the relative path to the file.\nTry using type command with <foldername>/<filename>",
+     "expected": ["type hck/new.txt"], "onsuccess": "Great! you can see the contents of the file."},
+
     {"message": "Delete the new.txt file inside HCK.\nHint : del <filename>",
      "expected": ["del hck/new.txt"], "onsuccess": "File deleted!"},
 
-    {"message": "Remove the folder HCK.\nHint : rmdir <foldername>\nKeep in mind, a folder must be empty is we want to remove using only the rmdir command.",
+    {"message": "Remove the folder HCK.\nHint : rmdir <foldername>\nKeep in mind, a folder must be empty if we want to remove using only the rmdir command.",
      "expected": ["rmdir hck"], "onsuccess": "Folder removed!"}
 ]
 
 WALKTHROUGH3 = [
-    {"message": "Let's create a batch file hello.bat using notepad.",
-     "expected": ["notepad hello.bat"], "onsuccess": "Batch file created!"},
+    {"message": "Let's create a batch file hello.bat using the type command.\nHint : use 'type nul' to create an empty file.",
+     "expected": ["type nul > hello.bat"], "onsuccess": "Batch file created!"},
 
-    {"message": "Write echo Hello World in the batch file and save it.",
-     "expected": ["edit hello.bat", "notepad hello.bat"], "onsuccess": "Hello World added to batch file."},
+    {"message": "Write echo 'Hello World' in the batch file and save it.",
+     "expected": ["notepad hello.bat"], "onsuccess": "Hello World added to batch file."},
 
     {"message": "Run the batch file using hello.bat",
-    "expected": ["hello.bat", "run hello.bat"], "onsuccess": "Batch file executed!\nCongratulations! You have completed the walkthrough for batch file creation."}
+    "expected": ["hello.bat"], "onsuccess": "Batch file executed!\nCongratulations! You have completed the walkthrough for batch file creation."}
 ]
 
 

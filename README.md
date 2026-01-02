@@ -7,6 +7,8 @@ through guided walkthroughs.
 - Python 3
 - Windows
 
+## Setup
+
 ```markdown
 git clone https://github.com/SamannKC/easycmd.git
 cd easycmd

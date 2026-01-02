@@ -15,19 +15,15 @@ dir                - List files and folders
 mkdir <folder>     - Create a new folder
 rmdir <folder>     - Remove an empty folder
 type <file>        - Display file contents
+type null > <filename> - Create an empty file
 del <file|*.ext>   - Delete a file
 copy <source> <destination> - Copy files
 move <source> <destination> - Move files
-version            - Show Windows version
-showdate           - Show current system date
-sysinfo            - Show system info
+ver                - Show Windows version
+systeminfo         - Show system info
 ping <hostname>    - Ping a host
 ipconfig           - Show IP addresses
-compare <file1> <file2> - Compare files
 notepad <file>     - Open file in Notepad
-walkthrough        - Beginner walkthrough
-walkthrough2       - Advanced beginner Windows commands
-walkthrough3       - Batch files workshop
 help               - Show this help
 exit               - Exit the sandbox
 """

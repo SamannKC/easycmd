@@ -2,7 +2,6 @@ import os
 import glob
 from colorama import init, Fore, Style
 
-# Initialize colorama
 init(autoreset=True)
 
 SANDBOX = os.path.expanduser("~/easycmd-sandbox")
@@ -89,8 +88,7 @@ WALKTHROUGH3 = [
 
 
 def inside_sandbox(path):
-    # Normalize both paths
-    sandbox_real = os.path.realpath(SANDBOX).lower()  # lowercase for Windows
+    sandbox_real = os.path.realpath(SANDBOX).lower()
     target_real = os.path.realpath(path).lower()
     return os.path.commonpath([sandbox_real, target_real]) == sandbox_real
 
@@ -120,7 +118,7 @@ def execute_command(cmdline):
             return
 
         if not os.path.isdir(new_path):
-            print(Fore.RED + f"❌ Not a directory: {target}")
+            print(Fore.RED + f"❌ Not a directory: {target}.\nCheck the correct directory name using dir command.")
             return
 
         if not inside_sandbox(new_path):
@@ -183,6 +181,7 @@ def run_walkthrough(steps):
 def main():
     print(Fore.CYAN + "✅ Entering sandbox...\n")
     print("Welcome to the terminal sandbox! You can test and learn terminal commands inside this sandox. (type exit to exit the sandbox)\n")
+    print(Fore.CYAN + "Type 'help' and press enter for basic command help.\n")
     print(Fore.CYAN + "Type 'walkthrough-help' and press enter for a guided walkthrough into terminal commands!\n")
     os.chdir(SANDBOX)
 

@@ -64,9 +64,9 @@ WALKTHROUGH2 = [
      "expected": ["mkdir hck"], "onsuccess": "Folder hck created!"},
 
     {"message": "Create a file new.txt inside hck with content 'Herald College Kathmandu'.\nUse notepad for now.",
-     "expected": ["notepad hck/new.txt"], "onsuccess": "new.txt created!"},
+     "expected": [r"notepad hck\new.txt"], "onsuccess": "new.txt created!"},
 
-    {"message": "Check the contents of the file using type <filename>.\nYou can specify files by specifying the relative path to the file.\nTry using type command with <foldername>\<filename>",
+    {"message": "Check the contents of the file using type <filename>.\nYou can specify files by specifying the relative path to the file.",
      "expected": [r"type hck\new.txt"], "onsuccess": "Great! you can see the contents of the file."},
 
     {"message": "Delete the new.txt file inside HCK.\nHint : del <filename>",

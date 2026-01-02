@@ -8,9 +8,6 @@ through guided walkthroughs.
 - Windows
 
 ```markdown
-## Run
-
-```bash
 git clone https://github.com/SamannKC/easycmd.git
 cd easycmd
 pip install -r requirements.txt

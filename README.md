@@ -5,8 +5,8 @@ The sandbox provides an isolated environment to work with terminal commands.All 
 It also includes walkthroughs for beginners that guides them through the basic commands.
 
 ## Requirements
-- Python 3
-- Windows
+- Python
+- Windows OS (recommended)
 
 ## Setup
 
